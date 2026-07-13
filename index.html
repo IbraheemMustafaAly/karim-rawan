@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karim & Rawan Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#f8f2e9;
+    color:#8b6b4a;
+    font-family:Poppins,sans-serif;
+    overflow-x:hidden;
+}
+
+
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+
+.envelope{
+    width:320px;
+    height:220px;
+    background:#c8a47e;
+    position:relative;
+    cursor:pointer;
+    border-radius:10px;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    transition:.8s;
+}
+
+
+.envelope:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:160px solid transparent;
+    border-right:160px solid transparent;
+    border-top:110px solid #b78d61;
+    transform-origin:top;
+    transition:1s;
+    z-index:3;
+}
+
+
+.envelope.open:before{
+    transform:rotateX(180deg);
+}
+
+
+.heart{
+    position:absolute;
+    top:90px;
+    left:135px;
+    font-size:45px;
+    z-index:5;
+}
+
+
+.card{
+    position:absolute;
+    width:270px;
+    height:350px;
+    background:white;
+    left:25px;
+    top:20px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    opacity:0;
+    transform:translateY(0);
+    transition:1s;
+    padding:20px;
+}
+
+
+.envelope.open .card{
+    opacity:1;
+    transform:translateY(-250px);
+}
+
+
+.invitation{
+    display:none;
+    text-align:center;
+    padding:40px 20px;
+    animation:fade 1.5s;
+}
+
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+
+h1,h2{
+    font-family:"Cormorant Garamond",serif;
+}
+
+
+.names{
+    font-size:70px;
+    line-height:1;
+}
+
+
+.divider{
+    margin:25px auto;
+    width:80px;
+    height:1px;
+    background:#c8a47e;
+}
+
+
+.text{
+    max-width:500px;
+    margin:20px auto;
+    color:#555;
+}
+
+
+.date{
+    margin-top:30px;
+    font-size:25px;
+}
+
+
+.section{
+    margin-top:50px;
+}
+
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#8b6b4a;
+    color:white;
+    text-decoration:none;
+}
+
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+
+.box{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    min-width:70px;
+}
+
+
+.number{
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+.label{
+    font-size:12px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="envelope" onclick="openEnvelope(this)">
+
+<div class="card">
+
+<h2>
+Wedding Invitation
+</h2>
+
+<p>
+Karim & Rawan
+</p>
+
+</div>
+
+<div class="heart">
+❤️
+</div>
+
+
+</div>
+
+
+<div class="invitation" id="invite">
+
+
+<h1 class="names">
+Karim
+<br>
+&
+<br>
+Rawan
+</h1>
+
+
+<div class="divider"></div>
+
+
+<p class="text">
+
+We joyfully invite you to celebrate the beginning of our forever.
+
+</p>
+
+
+<div class="date">
+
+25 July 2026
+<br>
+8:00 PM
+
+</div>
+
+
+<div class="section">
+
+<h2>
+Countdown
+</h2>
+
+
+<div class="countdown">
+
+<div class="box">
+<div class="number" id="days">0</div>
+<div class="label">Days</div>
+</div>
+
+
+<div class="box">
+<div class="number" id="hours">0</div>
+<div class="label">Hours</div>
+</div>
+
+
+<div class="box">
+<div class="number" id="minutes">0</div>
+<div class="label">Minutes</div>
+</div>
+
+
+<div class="box">
+<div class="number" id="seconds">0</div>
+<div class="label">Seconds</div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>
+Venue
+</h2>
+
+<p>
+Four Seasons - Shubra El-Kheima
+</p>
+
+
+<a class="button"
+href="https://share.google/SBqL1qlwO74Se5qvA"
+target="_blank">
+
+Open Google Maps
+
+</a>
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>
+Dress Code
+</h2>
+
+<p>
+Formal
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+function openEnvelope(el){
+
+el.classList.add("open");
+
+setTimeout(()=>{
+
+document.querySelector(".envelope").style.display="none";
+
+document.getElementById("invite").style.display="block";
+
+},1800);
+
+
+}
+
+
+
+const weddingDate = new Date("July 25, 2026 20:00:00").getTime();
+
+
+setInterval(()=>{
+
+
+let now = new Date().getTime();
+
+let distance = weddingDate-now;
+
+
+let days=Math.floor(distance/(1000*60*60*24));
+
+let hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+let minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+let seconds=Math.floor((distance%(1000*60))/1000);
+
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+
+},1000);
+
+
+</script>
+
+
+</body>
+</html>
