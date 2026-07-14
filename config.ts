@@ -12,7 +12,7 @@ export const CONFIG = {
 
   // ISO datetime مع تحديد +02:00 (توقيت القاهرة) عشان العد التنازلي يبقى صح
   // لأي حد بيشوف الصفحة من أي دولة تانية
-  weddingDateISO: "2026-12-12T19:00:00+02:00",
+  weddingDateISO: "2026-07-25T20:00:00+02:00",
   durationHours: 4, // مدة الحفل التقريبية (لحساب نهاية حدث الكالندر)
 
   venueName: "قاعة فور سيزون",
@@ -22,15 +22,8 @@ export const CONFIG = {
 
   // ⚠️ رقم واتساب بصيغة دولية من غير + ومن غير الصفر الأول (لازم تحطه عشان زرار
   // "ختم التأكيد" في الـ RSVP يشتغل صح) — مثال: رقم مصري 010xxxxxxxx يبقى 2010xxxxxxxx
-  whatsappNumber: "20xxxxxxxxxx",
+  whatsappNumber: "201145193462",
 
-  schedule: [
-    { time: "5:00 PM", label: "استقبال الضيوف", icon: "🤍" },
-    { time: "7:00 PM", label: "حفل الزفاف", icon: "💍" },
-    { time: "8:00 PM", label: "حفل الدخول", icon: "🍽️" },
-    { time: "9:00 PM", label: "الزفة", icon: "💃" },
-    { time: "10:00 PM", label: "قطع التورتة", icon: "🎂" },
-  ],
-
+ 
   dressColors: ["#5C1A28", "#C98F86", "#B08D4F", "#EBDFCB"],
 };
