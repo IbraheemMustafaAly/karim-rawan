@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دعوة زفاف عمر و سلمى</title>
+<title>دعوة زفاف كريم و روان</title>
 <meta name="description" content="يسعدنا ويشرفنا دعوتكم لحضور حفل زفافنا">
-<meta property="og:title" content="دعوة زفاف عمر و سلمى">
+<meta property="og:title" content="دعوة زفاف كريم و روان">
 <meta property="og:description" content="يسعدنا ويشرفنا دعوتكم لحضور حفل زفافنا">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#5C1A28">
@@ -296,8 +296,8 @@
       <p class="hero__bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
       <div class="rule"><span>✦</span></div>
       <p class="section__eyebrow">دعوة زفاف</p>
-      <h1 class="hero__names" id="couple-names-ar">عمر <span class="hero__amp">&amp;</span> سلمى</h1>
-      <p class="hero__names-en" id="couple-names-en">Omar &amp; Salma</p>
+      <h1 class="hero__names" id="couple-names-ar">كريم <span class="hero__amp">&amp;</span> روان</h1>
+      <p class="hero__names-en" id="couple-names-en">Karim &amp; Rawan</p>
       <p class="hero__line">يسعدنا ويشرفنا حضوركم لمشاركتنا أجمل لحظات العمر</p>
       <p class="hero__date" id="wedding-date-ar">—</p>
       <p class="hero__date-en" id="wedding-date-en">—</p>
@@ -380,7 +380,7 @@
     <footer class="footer wrap reveal">
       <div class="rule"><span>✦</span></div>
       <p class="footer__line">في انتظار حضوركم بشوق 🤍</p>
-      <p class="footer__names" id="footer-names">عمر &amp; سلمى</p>
+      <p class="footer__names" id="footer-names">كريم &amp; روان</p>
     </footer>
 
   </main>
@@ -391,29 +391,33 @@
    جوه الـ HTML). ده المصدر الوحيد للبيانات.
    ========================================================================= */
 const CONFIG = {
-  groomNameAr: "عمر",
-  brideNameAr: "سلمى",
-  groomInitial: "ع",
-  brideInitial: "س",
-  groomNameEn: "Omar",
-  brideNameEn: "Salma",
+  groomNameAr: "كريم",
+  brideNameAr: "روان",
+  groomInitial: "ك",
+  brideInitial: "ر",
+  groomNameEn: "Karim",
+  brideNameEn: "Rawan",
 
   // ISO datetime مع تحديد +02:00 (توقيت القاهرة) عشان العد التنازلي يبقى صح
   // لأي حد بيشوف الصفحة من أي دولة تانية
-  weddingDateISO: "2026-12-12T19:00:00+02:00",
+  // ⚠️ لاقيت تاريخين مختلفين في الملفات القديمة (25 يوليو و14 أغسطس) - ماشي هنا
+  // بالأحدث (25 يوليو 8 مساءً). لو ده غلط غيّر السطر ده بس.
+  weddingDateISO: "2026-07-25T20:00:00+02:00",
   durationHours: 4, // مدة الحفل التقريبية (لحساب نهاية حدث الكالندر)
 
   venueName: "قاعة فور سيزون",
-  venueAddress: "شبرا الخيمة - امام ترعة الاسماعيلية",
+  venueAddress: "شبرا الخيمة - أمام ترعة الإسماعيلية",
   // اكتب اسم القاعة أو العنوان الفعلي هنا، أو حتى الإحداثيات "30.0444,31.2357"
-  mapQuery: "Shubra El-Kheima, Egypt",
+  mapQuery: "Four Seasons Hall, Shubra El Kheima, Egypt",
 
-
+  // رقم واتساب بصيغة دولية من غير + ومن غير الصفر الأول
+  // مثال: رقم مصري 010xxxxxxxx يبقى 2010xxxxxxxx
+  whatsappNumber: "201145193462",
 
   schedule: [
     { time: "5:00 PM", label: "استقبال الضيوف", icon: "🤍" },
     { time: "7:00 PM", label: "حفل الزفاف", icon: "💍" },
-    { time: "8:00 PM", label: "حفل الدخول", icon: "🍽️" },
+    { time: "8:00 PM", label: "حفل العشاء", icon: "🍽️" },
     { time: "9:00 PM", label: "الزفة", icon: "💃" },
     { time: "10:00 PM", label: "قطع التورتة", icon: "🎂" }
   ],
